@@ -1,0 +1,9 @@
+nagios:
+    image: nagios:4.4.1
+    volumes:
+            - /nagios/etc:/usr/local/nagios/etc
+            - /nagios/logs:/usr/local/nagios/var/logs
+    environment:
+            - NAGIOSPASS=password
+    ports:
+            - "80:80"
